@@ -10,6 +10,6 @@ public class TestBase {
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.pageLoadStrategy = "eager";
         Configuration.timeout = 1000;
-        Configuration.holdBrowserOpen = true; //
+       //
     }
 }
