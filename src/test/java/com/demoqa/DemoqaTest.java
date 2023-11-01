@@ -26,8 +26,8 @@ public class DemoqaTest extends TestBase {
         $(".react-datepicker__year-select").selectOption("1990");
         $(".react-datepicker__month-select").selectOption("January");
         $(".react-datepicker__day--020:not(.react-datepicker__day--outside-month)").click();
-        $("#subjectsInput").setValue("b").setValue("Biology").pressEnter();
-        $("#subjectsInput").setValue("c").setValue("Chemistry").pressEnter();
+        $("#subjectsInput").setValue("Biology").pressEnter();
+        $("#subjectsInput").setValue("Chemistry").pressEnter();
 
         $("#hobbiesWrapper").$(byText("Sports")).click();
         $("#uploadPicture").uploadFromClasspath("Medved_mzoo.jpg");
@@ -43,12 +43,16 @@ public class DemoqaTest extends TestBase {
         $(".modal-content").should(appear);
         $(".modal-header").shouldHave(text("Thanks for submitting the form"));
 
-        $(".table-responsive").shouldHave(text("Anton Beloved"),
-                text("Beglov@mail.ru"), text("Male"), text("Male"),
-                text("1234567890"), text("1234567890"), text("20 January,1990"),
-                text("Biology, Chemistry"),
-                text("Sports"), text("Medved_mzoo.jpg"),
-                text("Sanctum Eternal"), text("NCR Delhi"));
+        $(".table-responsive").shouldHave(text("Anton Beloved"));
+        $(".table-responsive").shouldHave(text("Beglov@mail.ru"));
+        $(".table-responsive").shouldHave(text("Male"));
+        $(".table-responsive").shouldHave(text("1234567890"));
+        $(".table-responsive").shouldHave(text("20 January,1990"));
+        $(".table-responsive").shouldHave(text("Biology, Chemistry"));
+        $(".table-responsive").shouldHave(text("Sports"));
+        $(".table-responsive").shouldHave(text("Medved_mzoo.jpg"));
+        $(".table-responsive").shouldHave(text("Sanctum Eternal"));
+        $(".table-responsive").shouldHave(text("NCR Delhi"));
     }
 
 }
