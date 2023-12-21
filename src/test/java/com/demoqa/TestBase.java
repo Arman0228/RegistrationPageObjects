@@ -10,7 +10,7 @@ public class TestBase {
         Configuration.browserSize = "1600х900";
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.pageLoadStrategy = "eager";
-        Configuration.timeout = 1000;
+        Configuration.timeout = 6000;
        //
     }
 }
